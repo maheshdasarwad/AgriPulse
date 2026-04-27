@@ -9,30 +9,30 @@ Supports English and Marathi.
 
 ---
 
-agrismart/
+AgriPulse/
 ├── README.md
-│
 ├── backend/
+│   ├── .gitignore
 │   ├── main.py
 │   ├── requirements.txt
-│   ├── .env.example
 │   ├── routers/
 │   │   ├── __init__.py
-│   │   ├── health.py
 │   │   ├── crop_advisor.py
-│   │   ├── image_analyzer.py
-│   │   └── financial_planner.py
+│   │   ├── financial_planner.py
+│   │   ├── health.py
+│   │   └── image_analyzer.py
 │   └── services/
 │       ├── __init__.py
 │       ├── crop_advisor.py
-│       ├── image_analyzer.py
-│       └── financial_planner.py
-│
+│       ├── financial_planner.py
+│       └── image_analyzer.py
 └── frontend/
-    ├── index.html
+    ├── .gitignore
     ├── package.json
-    ├── vite.config.ts
+    ├── package-lock.json
     ├── tsconfig.json
+    ├── vite.config.ts
+    ├── index.html
     ├── public/
     │   └── favicon.svg
     └── src/
@@ -41,37 +41,36 @@ agrismart/
         ├── index.css
         ├── api/
         │   └── client.ts
+        ├── components/
+        │   ├── MarkdownRenderer.tsx
+        │   ├── layout/
+        │   │   └── Header.tsx
+        │   ├── tabs/
+        │   │   ├── CropAdvisorTab.tsx
+        │   │   ├── FinancialPlannerTab.tsx
+        │   │   └── ImageScannerTab.tsx
+        │   └── ui/
+        │       ├── alert.tsx
+        │       ├── button.tsx
+        │       ├── card.tsx
+        │       ├── input.tsx
+        │       ├── label.tsx
+        │       ├── select.tsx
+        │       ├── tabs.tsx
+        │       ├── toast.tsx
+        │       ├── toaster.tsx
+        │       ├── toggle.tsx
+        │       ├── toggle-group.tsx
+        │       └── tooltip.tsx
         ├── contexts/
         │   └── LanguageContext.tsx
         ├── hooks/
         │   └── use-toast.ts
         ├── lib/
         │   └── utils.ts
-        ├── pages/
-        │   ├── Home.tsx
-        │   └── not-found.tsx
-        └── components/
-            ├── MarkdownRenderer.tsx
-            ├── layout/
-            │   └── Header.tsx
-            ├── tabs/
-            │   ├── CropAdvisorTab.tsx
-            │   ├── ImageScannerTab.tsx
-            │   └── FinancialPlannerTab.tsx
-            └── ui/
-                ├── alert.tsx
-                ├── button.tsx
-                ├── card.tsx
-                ├── input.tsx
-                ├── label.tsx
-                ├── select.tsx
-                ├── tabs.tsx
-                ├── toast.tsx
-                ├── toaster.tsx
-                ├── toggle.tsx
-                ├── toggle-group.tsx
-                └── tooltip.tsx
-
+        └── pages/
+            ├── Home.tsx
+            └── not-found.tsx
 ## Requirements
 
 - Python 3.9+
