@@ -9,7 +9,6 @@ Supports English and Marathi.
 
 ---
 
-File Folder 
 agrismart/
 ├── README.md
 │
@@ -72,8 +71,6 @@ agrismart/
                 ├── toggle.tsx
                 ├── toggle-group.tsx
                 └── tooltip.tsx
-
-
 
 ## Requirements
 
