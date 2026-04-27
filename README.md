@@ -1,14 +1,18 @@
 # AgriSmart Assistant
 
 An AI-powered farming assistant with three tools:
-- **Crop Advisor** — detailed growing plans for any crop
-- **Crop Health Scanner** — analyze crop photos for diseases
-- **Financial Planner** — budget and financial planning for your farm
 
-Supports English and Marathi.
+- **Crop Advisor** — detailed growing plans for any crop  
+- **Crop Health Scanner** — analyze crop photos for diseases  
+- **Financial Planner** — budget and financial planning for your farm  
+
+Supports **English** and **Marathi**.
 
 ---
 
+## Project Structure
+
+```text
 AgriPulse/
 ├── README.md
 ├── backend/
@@ -71,10 +75,15 @@ AgriPulse/
         └── pages/
             ├── Home.tsx
             └── not-found.tsx
+```
+
+---
+
 ## Requirements
 
 - Python 3.9+
-- Node.js 18+ and npm
+- Node.js 18+
+- npm
 
 ---
 
@@ -82,70 +91,88 @@ AgriPulse/
 
 ### 1. Get a Google API Key
 
-Go to https://aistudio.google.com/apikey and create a free API key for Gemini.
+Go to: https://aistudio.google.com/apikey
+
+Create a free Gemini API key.
+
+---
 
 ### 2. Backend Setup
 
 ```bash
 cd backend
 
-# Create a virtual environment (recommended)
 python -m venv venv
-source venv/bin/activate        # Linux / Mac
-venv\Scripts\activate         # Windows
 
-# Install dependencies
+# Linux / Mac
+source venv/bin/activate
+
+# Windows
+venv\Scripts\activate
+
 pip install -r requirements.txt
 
-# Create your .env file
 cp .env.example .env
-# Open .env and paste your Google API key
 ```
 
-Edit `.env`:
-```
+Edit `.env`
+
+```env
 GOOGLE_API_KEY=your_key_here
 PORT=8000
 ```
 
-Start the backend:
+Start backend:
+
 ```bash
 uvicorn main:app --reload
 ```
 
-The API will be running at http://localhost:8000
+Backend runs on:
+
+```text
+http://localhost:8000
+```
+
+---
 
 ### 3. Frontend Setup
 
-Open a new terminal:
+Open new terminal:
 
 ```bash
 cd frontend
-
-# Install dependencies
 npm install
-
-# Start the dev server
 npm run dev
 ```
 
-The app will be running at http://localhost:5173
+Frontend runs on:
+
+```text
+http://localhost:5173
+```
 
 ---
 
-## How it works
+## How It Works
 
-- Frontend (React + Vite + Tailwind) runs at **localhost:5173**
-- Backend (Python FastAPI) runs at **localhost:8000**
-- The frontend proxies all `/api` requests to the backend automatically
+- **Frontend:** React + Vite + Tailwind  
+- **Backend:** FastAPI + Python  
+- Frontend automatically proxies `/api` requests to backend.
 
 ---
 
-## Build for production
+## Build for Production
 
 ```bash
 cd frontend
 npm run build
 ```
 
-This creates a `dist/` folder you can serve with any static file server.
+Creates:
+
+```text
+dist/
+```
+
+You can deploy that folder using Netlify, Vercel, Nginx, Apache, etc.
